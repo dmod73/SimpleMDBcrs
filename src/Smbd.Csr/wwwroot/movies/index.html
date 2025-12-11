@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Movies • Simple Movie Database</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <script type="module" src="/scripts/movies/index.js" defer></script>
+</head>
+<body>
+<header>
+    <h1>Movies</h1>
+    <nav>
+        <ul>
+            <li><a href="/" class="btn">Home</a></li>
+            <li><a href="/movies/add.html" class="btn">Add Movie</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <div id="status" class="status">Loading...</div>
+
+    <div class="controls">
+        <span id="page-num" class="badge">Page 1</span>
+        <a id="first" class="btn">First</a>
+        <a id="prev" class="btn">Prev</a>
+        <a id="next" class="btn">Next</a>
+        <a id="last" class="btn">Last</a>
+
+        <div class="page-size-container">
+            <label for="page-size">Items per page:</label>
+            <select id="page-size"></select>
+        </div>
+    </div>
+
+    <div id="movie-list" class="grid cards" style="margin-top:12px;"></div>
+</main>
+
+<template id="movie-card">
+    <div class="card">
+        <h3>
+            <span class="title"></span>
+            <span class="badge year"></span>
+        </h3>
+        <div class="row-actions">
+            <a class="btn btn-view">View</a>
+            <a class="btn btn-edit">Edit</a>
+            <button class="btn danger btn-delete" type="button">Remove</button>
+        </div>
+    </div>
+</template>
+
+</body>
+</html>
