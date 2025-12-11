@@ -1,2 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿namespace Smdb.Api;
+
+public class Program
+{
+    public static async Task Main()
+    {
+        App app = new App();
+        await app.Start();
+    }
+}
