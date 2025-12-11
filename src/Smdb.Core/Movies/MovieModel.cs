@@ -1,4 +1,4 @@
-namespace Smbd.Core.Movies;
+namespace Smdb.Core.Movies;
 
 // Modelo principal de película
 public class Movie

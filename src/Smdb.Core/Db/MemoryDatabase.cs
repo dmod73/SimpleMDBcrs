@@ -1,6 +1,6 @@
-namespace Smbd.Core.Db;
+namespace Smdb.Core.Db;
 
-using Smbd.Core.Movies;
+using Smdb.Core.Movies;
 
 public class MemoryDatabase
 {
