@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Edit Movie • Simple Movie Database</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <script type="module" src="/scripts/movies/edit.js" defer></script>
+</head>
+<body>
+<header>
+    <h1>Edit Movie</h1>
+    <nav>
+        <ul>
+            <li><a href="/" class="btn">Home</a></li>
+            <li><a href="/movies/index.html" class="btn">All Movies</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <div id="status" class="status">Loading...</div>
+
+    <form id="movie-form" class="grid">
+        <div class="field">
+            <label for="title">Title</label>
+            <input id="title" name="title" type="text" required />
+        </div>
+
+        <div class="field">
+            <label for="year">Year</label>
+            <input
+                id="year"
+                name="year"
+                type="number"
+                min="1888"
+                max="9999"
+                required
+            />
+        </div>
+
+        <div class="field">
+            <label for="description">Description</label>
+            <textarea id="description" name="description"></textarea>
+        </div>
+
+        <div class="form-actions">
+            <button class="btn primary" type="submit">Save Changes</button>
+            <a class="btn" href="/movies/index.html">Cancel</a>
+        </div>
+    </form>
+</main>
+</body>
+</html>
