@@ -83,7 +83,7 @@ main {
 
 .container {
     width: 100%;
-    max-width: 650px;
+    max-width: 1400px;
     background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(15px);
     padding: 2.5rem 2.5rem;
@@ -228,6 +228,131 @@ button.btn:disabled {
     transform: none;
 }
 
+/* Controls & Pagination */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.badge {
+    background: var(--blockbuster-gold);
+    color: var(--dark-blue);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.page-size-container {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.page-size-container label {
+    color: var(--blockbuster-gold);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.page-size-container select {
+    padding: 0.5rem 1rem;
+    border: 2px solid rgba(253, 184, 19, 0.3);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--text-dark);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.page-size-container select:focus {
+    outline: none;
+    border-color: var(--blockbuster-gold);
+    box-shadow: 0 0 0 3px rgba(253, 184, 19, 0.2);
+}
+
+/* Movie Cards Grid */
+.grid.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-top: 0 !important;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(253, 184, 19, 0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(253, 184, 19, 0.3);
+    border-color: var(--blockbuster-gold);
+}
+
+.card h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-light);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card .title {
+    flex: 1;
+    font-weight: bold;
+    color: var(--blockbuster-gold);
+}
+
+.card .year {
+    flex-shrink: 0;
+    font-size: 0.85rem;
+}
+
+.row-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.row-actions .btn {
+    flex: 1;
+    min-width: 80px;
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.btn.danger {
+    background: #dc3545;
+    color: white;
+}
+
+.btn.danger:hover {
+    background: #c82333;
+    border-color: #bd2130;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     header h1 {
@@ -249,5 +374,13 @@ button.btn:disabled {
     
     .form-actions .btn {
         width: 100%;
+    }
+    
+    .grid.cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .controls {
+        flex-direction: column;
     }
 }
