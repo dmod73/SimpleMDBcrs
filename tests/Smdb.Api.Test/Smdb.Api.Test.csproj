@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\SharedLibrary\src\Shared\Shared.csproj" />
+    <ProjectReference Include="..\..\SharedLibrary\src\Shared\Shared.csproj" />
     <ProjectReference Include="..\..\src\Smdb.Core\Smdb.Core.csproj" />
     <ProjectReference Include="..\..\src\Smdb.Api\Smdb.Api.csproj" />
   </ItemGroup>
